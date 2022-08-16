@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap");
+
+* {
+  /*   box-sizing: border-box; */
+}
+
+h1 {
+  font-family: "Rubik Distressed", cursive;
+  font-size: 56px;
+  color: #ffae1b;
+  transform: rotate(-3deg);
+  user-select: none;
+}
+
+#submit {
+  color: #2ee22e;
+  padding: 0.25em 1.25em;
+  border: 2px solid #2ee22e;
+}
+
+#reset {
+  color: red;
+}
+
+.container {
+  font-family: "Lato";
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.inputs {
+  font-size: 24px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.inputs input,
+.inputs input:disabled {
+  color: black;
+  font-size: 24px;
+  width: 2em;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em;
+  background: lightgrey;
+}
+
+.input-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+button {
+  /*   font-size: 18px; */
+  font-size: 24px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  border-radius: 8px;
+}
+
+.buttons {
+  margin: 20px 0 20px 0;
+}
+
+.inputs .plus {
+  /*   background: lightgreen; */
+}
+
+.inputs .minus {
+  /*   background: red; */
+}
+
+.timer-container {
+  position: relative;
+  margin: 10px 0 10px 0;
+  width: 10em;
+  height: 10em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /*   color: white; */
+  font-size: 25px;
+  line-height: 40px;
+  text-align: center;
+  border: 5px solid rgb(192, 192, 192, 0.7);
+  border-radius: 50%;
+  cursor: pointer;
+  /*   transition: transform .5s ease-out; */
+  transition: all 0.25s ease-in-out;
+}
+
+.timer-container:active {
+  transform: scale(0.95);
+}
+
+#timer {
+  font-size: 36px;
+  /*   animation: test 1s infinite; */
+}
+
+.rounds {
+  font-size: 18px;
+}
+
+#command {
+  font-size: 30px;
+}
+
+.msgElement {
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: light;
+  display: none;
+  position: absolute;
+  min-width: 200px;
+  /*   top: -150%; */
+  top: 9;
+  right: 0;
+  background: rgb(15, 15, 15, 0.8);
+  color: white;
+  border-radius: 8px;
+  padding: 0.75em;
+}
+
+.msgElement.active {
+  display: block;
+}
+
+.soundSwitch {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 460px) {
+  /*Here comes the actual code*/
+  .inputs {
+    flex-direction: column;
+  }
+  .input-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* @keyframes test {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+ 100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+ */
