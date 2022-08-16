@@ -12,6 +12,7 @@ h1 {
   transform: rotate(-3deg);
   user-select: none;
   margin: 0 0 50px 0;
+  text-align: center;
 }
 
 #submit {
@@ -58,12 +59,13 @@ body {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .inputs input,
 .inputs input:disabled {
   color: black;
-  font-size: 24px;
+  font-size: 18px;
   width: 2em;
   text-align: center;
   border: none;
@@ -73,6 +75,7 @@ body {
 }
 
 .input-control {
+  font-size: 18px;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -80,7 +83,7 @@ body {
 
 button {
   /*   font-size: 18px; */
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   background: none;
   border: none;
@@ -169,10 +172,29 @@ button {
 @media only screen and (max-width: 460px) {
   /*Here comes the actual code*/
 
+  body {
+    margin: 0;
+  }
+
   .container {
     max-width: none;
     margin: 0;
+    padding: 20px;
+    border-radius: 0;
   }
+  .inputs {
+    flex-direction: column;
+  }
+  .input-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /*Here comes the actual code*/
+
   .inputs {
     flex-direction: column;
   }
